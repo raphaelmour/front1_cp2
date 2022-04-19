@@ -22,9 +22,11 @@ html,
 body {
   font-size: 62.5%;
 }
+
+/* MENU */
 .head {
   width: 100%;
-  background-color: #171717;
+  background-color: #0e0d0d;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,13 +41,12 @@ body {
 }
 
 .logo {
-  color: aliceblue;
+  color: #ffffff;
   font-size: 2rem;
-
   font-weight: bold;
 }
 .logo span {
-  color: #e51b3e;
+  color: #DC471F;
 }
 
 .menu ul {
@@ -54,22 +55,65 @@ body {
 }
 
 .menu a {
-  color: #adacac;
+  color: #ffffff;
   font-size: 1.4rem;
   font-weight: bold;
 }
 .menu a:hover {
-  color: #e51b3e;
+  color: #DC471F;
 }
-
+/* BANNER PRINCIPAL */
 .banner {
   background: no-repeat center/cover url("../img/joker/bannerJoker.svg");
-  height: 80vh;
+  height: 100vh;
   margin-top: 60px;
 }
 
+/* BANNER INTERESTELAR */
+.banner-interestelar {
+  background: no-repeat center/cover url("../img/interestelar/interestelar2.jpg");
+  height: 100vh;
+  margin-top: 60px;
+}
+
+/* BANNER VINGADORES */
+.banner-vingadores {
+  background: no-repeat center/cover url("../img/vingadores/vingadores5.jpg");
+  height: 100vh;
+  margin-top: 60px;
+}
+
+/* BANNER DOUTOR ESTRANHO*/
+.banner-doutor_estranho {
+  background: no-repeat center/cover url("../img/doutor_estranho/doutor_estranho1.jpg");
+  height: 100vh;
+  margin-top: 60px;
+}
+
+/* BANNER JOKER */
+.banner-joker {
+  background: no-repeat center/cover url("../img/joker/joker2.jpg");
+  height: 100vh;
+  margin-top: 60px;
+}
+
+/* BANNER BATMAN */
+.banner-batman {
+  background: no-repeat center/cover url("../img/batman/batman9.jpg");
+  height: 100vh;
+  margin-top: 60px;
+}
+
+/* BANNER HOMEM-ARANHA */
+.banner-homem_aranha {
+  background: no-repeat center/cover url("../img/homem_aranha/homem_aranha4.jpg");
+  height: 100vh;
+  margin-top: 60px;
+}
+
+
 .titulo-principal {
-  font-size: 4.4rem;
+  font-size: 3.4rem;
   font-weight: bold;
   margin-top: 32px;
   margin-bottom: 3px;
@@ -88,8 +132,11 @@ body {
 .producao {
   display: flex;
   margin-top: 32px;
-  gap: 200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
+
 
 .producao h2 {
   font-size: 2.2rem;
@@ -101,33 +148,37 @@ body {
   color: rgba(0, 133, 255, 0.75);
   font-weight: normal;
 }
-iframe {
-  width: 100%;
-  height: 450px;
-  border-radius: 8px;
-}
 
+
+.video {
+  height: 500px;
+  margin-top: 42px;
+  margin-bottom: 100px;
+}
 .titulo-video {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 16px;
 }
-.video {
-  margin-top: 42px;
-  margin-bottom: 32px;
+iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
+/* FOOTER */
 .rodape {
   height: 300px auto;
-  background-color: #171717;
+  background-color: #0C0C14;
 }
 
 .container-footer {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
   padding-bottom: 100px;
 }
 .aluno {
@@ -140,15 +191,38 @@ iframe {
   font-size: 2.4rem;
   font-weight: normal;
   color: #ffffff;
+  margin: 0 auto;
 }
 .aluno h3 {
   font-size: 1.4rem;
   font-weight: normal;
   color: #ffffff;
 }
+
+/* ICONES FOOTER */
+.container-icon {
+  width: 180px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.circulo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.circulo i {
+  font-size: 3rem;
+  color: #ffffff;
+}
+.circulo i:hover {
+  color: #DC471F;
+}
+
+/* RESPONSIVO */
+
 @media (max-width: 725px) {
   .producao {
-    gap: 140px;
+    gap: 30px;
   }
 }
 
@@ -162,5 +236,39 @@ iframe {
   .container-footer {
     flex-direction: column;
     align-items: center;
+  }
+  .banner {
+    margin-top: 150px;
+  }
+  .video {
+    height: 400px;
+  }
+}
+@media (max-width: 325px) {
+  .container-menu {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .menu ul{
+    margin-top: 40px;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner {
+    margin-top: 150px;
+  }
+  .video {
+    height: 400px;
   }
 }
